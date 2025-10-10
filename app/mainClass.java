@@ -38,7 +38,7 @@ public class mainClass {
     }
 
 	/**
-	 * Dynamically invokes a function in the EX01_Developed_Calculator class based on user input.
+	 * Dynamically invokesa function in classes of mymath package based on user input.
 	 * 
 	 * @param input the string entered by the user in the format "functionName(arg1,arg2,...)"
 	 * @throws Exception if any reflection or invocation errors occur
