@@ -127,8 +127,6 @@ public class mainClass {
 
 	// Classes where functions can be found
 	private static final Class<?>[] FUNCTION_CLASSES = {
-	    mainClass.class,  // main class
-	    //Classes in my mymath package
 	    ArrayMath.class,
 	    BasicMath.class,
 	    finance.class,
