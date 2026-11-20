@@ -2,6 +2,9 @@ package mymath;
 
 import java.text.DecimalFormat;
 
+/**
+ * Financial helper functions (interest-rate conversions).
+ */
 public class finance {
 
 	public static void main(String[] args) {

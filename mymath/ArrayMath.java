@@ -1,5 +1,9 @@
 package mymath;
 
+/**
+ * Aggregate operations over arrays of doubles (sum, product).
+ * All methods are static and reject null or empty arrays.
+ */
 public class ArrayMath {
 
 	public static void main(String[] args) {}

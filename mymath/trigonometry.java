@@ -1,5 +1,10 @@
 package mymath;
 
+/**
+ * Trigonometric functions: sine, cosine, tangent, their reciprocals
+ * (csc, sec, cot), inverses, hyperbolic forms and their inverses,
+ * plus angle conversions. All angles are in radians unless stated otherwise.
+ */
 public class trigonometry {
 
 	public static void main(String[] args) {}

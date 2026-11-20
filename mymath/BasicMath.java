@@ -1,8 +1,13 @@
 package mymath;
 
-//fundamental scalar operations — exponentiation, 
-//logarithms, absolute values, and simple number 
-//theory operations.
+/**
+ * Fundamental scalar operations: exponentiation, logarithms, absolute value,
+ * rounding and simple integer arithmetic.
+ *
+ * <p>{@code pow}, {@code exp} and {@code log} are implemented from scratch
+ * (integer powers by repeated multiplication, exp by its Taylor series,
+ * log by Newton's method on exp); the other methods wrap {@link java.lang.Math}.
+ */
 public class BasicMath {
 
 	public static void main(String[] args) {}
@@ -35,7 +40,8 @@ public class BasicMath {
 		return result;
 	}
 
-	//Exponentiel function
+	// Exponential function e^x, computed with the Taylor series
+	// sum of x^n / n!, stopping when a term drops below 1e-15
 	public static double exp(double x) {
 		double sum = 1.0; // first term
 		double term = 1.0;
@@ -65,7 +71,8 @@ public class BasicMath {
 		return Math.copySign(magnitude,sign);
 	}
 
-	//Returns the natural logarithm of x
+	// Returns the natural logarithm of x, by Newton's method:
+	// solves exp(y) = x with the iteration y <- y - 1 + x / exp(y)
 	public static double log(double x) {
 		if (x <= 0) throw new IllegalArgumentException("x must be positive non zero number");
 

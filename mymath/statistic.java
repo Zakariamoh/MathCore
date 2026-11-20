@@ -1,6 +1,13 @@
 package mymath;
 
 
+/**
+ * Descriptive statistics over arrays of doubles: extremes, mid-range, median,
+ * and arithmetic / geometric / harmonic / weighted means restricted to a
+ * quantile range given as bounds in [0, 1].
+ *
+ * <p>Every method works on a sorted copy, so the caller's array is never modified.
+ */
 public class statistic {
 
 	public static void main(String[] args) {}
@@ -106,11 +113,13 @@ public class statistic {
 	 *   <li>1 corresponds to the maximum (100th percentile)</li>
 	 * </ul>
 	 * 
-	 * <p>The function first clones and sorts the input array to preserve the
-	 * original order. It then computes the indices corresponding to the requested
-	 * quartile bounds and returns the weighted mean of the values within that interval.
-	 * 
+	 * <p>The function first pairs each value with its weight and sorts the pairs by value,
+	 * leaving the input arrays unchanged. It then computes the indices corresponding to the
+	 * requested quartile bounds and returns the weighted mean of the values within that
+	 * interval: sum(w_i * x_i) / sum(w_i).
+	 *
 	 * @param values the array of numerical values (non-null and non-empty)
+	 * @param weights the weight of each value (same length as {@code values})
 	 * @param lowerQuartile the lower quartile bound (inclusive), between 0 and 1
 	 * @param upperQuartile the upper quartile bound (exclusive), between 0 and 1
 	 * @return the mean of the elements within the specified quartile range
